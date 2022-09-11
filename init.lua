@@ -1,0 +1,8 @@
+require "qmmr.options"
+require "qmmr.keymaps"
+require "qmmr.plugins"
+require "qmmr.colorscheme"
+require "qmmr.cmp"
+require "qmmr.lsp"
+require "qmmr.telescope"
+require "qmmr.treesitter"
