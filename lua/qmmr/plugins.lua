@@ -64,6 +64,10 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use('jose-elias-alvarez/null-ls.nvim')
+
+  -- Prettier
+  use('MunifTanjim/prettier.nvim')
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
@@ -80,7 +84,7 @@ return packer.startup(function(use)
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
-     'kyazdani42/nvim-web-devicons', -- optional, for file icons
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }

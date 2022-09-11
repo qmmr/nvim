@@ -7,3 +7,6 @@ require "qmmr.lsp"
 require "qmmr.telescope"
 require "qmmr.treesitter"
 require "qmmr.nvim-tree"
+require "qmmr.null-ls"
+require "qmmr.prettier"
+
