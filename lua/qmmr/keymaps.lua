@@ -75,3 +75,5 @@ keymap("n", "<leader>ff", "<cmd>lua require'telescope.builtin'.find_files()<cr>"
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
 
+-- File explorer
+keymap("n", "<C-n>", "<cmd>NvimTreeToggle<cr>", opts)
