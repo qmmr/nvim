@@ -1,18 +1,5 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 local configs = require("nvim-treesitter.configs")
+
 configs.setup {
   ensure_installed = "all",
   sync_install = false, 
@@ -33,3 +20,7 @@ configs.setup {
     -- termcolors = {} -- table of colour name strings
   }
 }
+
+-- set foldmethod=expr
+-- set foldexpr=nvim_treesitter#foldexpr()
+
