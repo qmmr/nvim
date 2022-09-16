@@ -10,4 +10,5 @@ require "qmmr.nvim-tree"
 require "qmmr.null-ls"
 require "qmmr.prettier"
 require "qmmr.bufferline"
+require "qmmr.gitsigns"
 

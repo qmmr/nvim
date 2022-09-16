@@ -25,6 +25,7 @@ vim.cmd [[
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
+
 if not status_ok then
   return
 end
@@ -97,6 +98,9 @@ return packer.startup(function(use)
       require('Comment').setup()
     end
   }
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
