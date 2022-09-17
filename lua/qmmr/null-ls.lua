@@ -1,7 +1,17 @@
-local null_ls = require("null-ls")
+local status_ok, null_ls = pcall(require, "null-ls")
+
+if not status_ok then
+  return "Null-ls was not found"
+end
+
+local formatting = null_ls.builtins.formatting
+
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
+  sources = {
+    formatting.prettierd
+  },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
       vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })

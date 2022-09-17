@@ -25,7 +25,11 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+-- Better buffer navigation
+keymap("n", "gp", ":bp<CR>", opts)
+keymap("n", "gn", ":bn<CR>", opts)
+keymap("n", "gl", ":ls<CR>", opts)
+keymap("n", "gdd", ":bdelete<CR>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -42,7 +46,7 @@ keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
--- Press jk fast to enter
+-- Press jj fast to exit to normal mode
 keymap("i", "jj", "<ESC>", opts)
 
 -- Visual --
