@@ -42,37 +42,41 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   -- My plugins here
-  use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "wbthomason/packer.nvim"          -- Have packer manage itself
+  use "nvim-lua/popup.nvim"             -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim"           -- Useful lua functions used in lots of plugins
   use { 'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons' }
+  use "tpope/vim-surround"
+  use "tpope/vim-fugitive"
 
   -- Colorschemes
   use 'folke/tokyonight.nvim'
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/nvim-cmp"                -- The completion plugin
+  use "hrsh7th/cmp-buffer"              -- buffer completions
+  use "hrsh7th/cmp-path"                -- path completions
+  use "hrsh7th/cmp-cmdline"             -- cmdline completions
+  use "saadparwaiz1/cmp_luasnip"        -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
 
   -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
-  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+  use "L3MON4D3/LuaSnip"                -- snippet engine
+  use "rafamadriz/friendly-snippets"    -- a bunch of snippets to use
 
   -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
+  use "neovim/nvim-lspconfig"           -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  use('jose-elias-alvarez/null-ls.nvim')
+  use "tamago324/nlsp-settings.nvim"    -- language server settings defined in json for
+
+  use "jose-elias-alvarez/null-ls.nvim"
 
   -- Prettier
-  use('MunifTanjim/prettier.nvim')
+  use "MunifTanjim/prettier.nvim"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   -- Treesitter
   use {
@@ -81,6 +85,9 @@ return packer.startup(function(use)
   }
   use "p00f/nvim-ts-rainbow"
   use "nvim-treesitter/playground"
+
+  -- Motion
+  use 'ggandor/lightspeed.nvim'
 
   -- File explorer
   use {
